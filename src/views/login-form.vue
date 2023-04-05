@@ -1,37 +1,23 @@
 <template>
   <form class="login-form" @submit.prevent="onSubmit">
     <dx-form :form-data="formData" :disabled="loading">
-      <dx-item
-        data-field="email"
-        editor-type="dxTextBox"
-        :editor-options="{ stylingMode: 'filled', placeholder: 'Email', mode: 'email' }"
-      >
+      <dx-item data-field="email" editor-type="dxTextBox"
+        :editor-options="{ stylingMode: 'filled', placeholder: 'Email', mode: 'email' }">
         <dx-required-rule message="Email is required" />
         <dx-email-rule message="Email is invalid" />
         <dx-label :visible="false" />
       </dx-item>
-      <dx-item
-        data-field='password'
-        editor-type='dxTextBox'
-        :editor-options="{ stylingMode: 'filled', placeholder: 'Password', mode: 'password' }"
-      >
+      <dx-item data-field='password' editor-type='dxTextBox'
+        :editor-options="{ stylingMode: 'filled', placeholder: 'Password', mode: 'password' }">
         <dx-required-rule message="Password is required" />
         <dx-label :visible="false" />
       </dx-item>
-      <dx-item
-        data-field="rememberMe"
-        editor-type="dxCheckBox"
-        :editor-options="{ text: 'Remember me', elementAttr: { class: 'form-text' } }"
-      >
+      <dx-item data-field="rememberMe" editor-type="dxCheckBox"
+        :editor-options="{ text: 'Remember me', elementAttr: { class: 'form-text' } }">
         <dx-label :visible="false" />
       </dx-item>
       <dx-button-item>
-        <dx-button-options
-          width="100%"
-          type="default"
-          template="signInTemplate"
-          :use-submit-behavior="true"
-        >
+        <dx-button-options width="100%" type="default" template="signInTemplate" :use-submit-behavior="true">
         </dx-button-options>
       </dx-button-item>
       <dx-item>
@@ -42,11 +28,7 @@
         </template>
       </dx-item>
       <dx-button-item>
-        <dx-button-options
-          text="Create an account"
-          width="100%"
-          :on-click="onCreateAccountClick"
-        />
+        <dx-button-options text="Create an account" width="100%" :on-click="onCreateAccountClick" />
       </dx-button-item>
       <template #signInTemplate>
         <div>
@@ -83,8 +65,8 @@ export default {
     const router = useRouter();
 
     const formData = reactive({
-      email:"",
-      password:""
+      email: "",
+      password: ""
     });
     const loading = ref(false);
 
