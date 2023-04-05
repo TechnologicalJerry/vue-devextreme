@@ -1,23 +1,15 @@
 <template>
   <form class="reset-password-form" @submit.prevent="onSubmit">
     <dx-form :form-data="formData" :disabled="loading">
-      <dx-item
-        data-field="email"
-        editor-type="dxTextBox"
-        :editor-options="{ stylingMode: 'filled', placeholder: 'Email', mode: 'email' }"
-      >
+      <dx-item data-field="email" editor-type="dxTextBox"
+        :editor-options="{ stylingMode: 'filled', placeholder: 'Email', mode: 'email' }">
         <dx-required-rule message="Email is required" />
         <dx-email-rule message="Email is invalid" />
         <dx-label :visible="false" />
       </dx-item>
       <dx-button-item>
-        <dx-button-options
-          :element-attr="{ class: 'submit-button' }"
-          width="100%"
-          type="default"
-          template="resetTemplate"
-          :use-submit-behavior="true"
-        >
+        <dx-button-options :element-attr="{ class: 'submit-button' }" width="100%" type="default" template="resetTemplate"
+          :use-submit-behavior="true">
         </dx-button-options>
       </dx-button-item>
       <dx-item>
@@ -30,8 +22,8 @@
       <template #resetTemplate>
         <div>
           <span class="dx-button-text">
-              <dx-load-indicator v-if="loading" width="24px" height="24px" :visible="true" />
-              <span v-if="!loading">Reset my password</span>
+            <dx-load-indicator v-if="loading" width="24px" height="24px" :visible="true" />
+            <span v-if="!loading">Reset my password</span>
           </span>
         </div>
       </template>
@@ -73,7 +65,7 @@ export default {
 
     const loading = ref(false);
     const formData = reactive({
-      email:""
+      email: ""
     });
 
     async function onSubmit() {
@@ -91,7 +83,7 @@ export default {
       }
     }
 
-    return { 
+    return {
       loading,
       formData,
       onSubmit
