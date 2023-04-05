@@ -8,7 +8,7 @@ import defaultLayout from "./layouts/side-nav-outer-toolbar";
 import simpleLayout from "./layouts/single-card";
 
 function loadView(view) {
-  return () => import (/* webpackChunkName: "login" */ `./views/${view}.vue`)
+  return () => import(/* webpackChunkName: "login" */ `./views/${view}.vue`)
 }
 
 const router = new createRouter({
