@@ -1,9 +1,9 @@
 <template>
   <dx-scroll-view height="100%" width="100%" class="with-footer single-card">
-     <div class="dx-card content">
+    <div class="dx-card content">
       <div class="header">
-        <div class="title">{{title}}</div>
-        <div class="description">{{description}}</div>
+        <div class="title">{{ title }}</div>
+        <div class="description">{{ description }}</div>
       </div>
       <slot />
     </div>
@@ -27,10 +27,10 @@ export default {
     const description = ref("");
 
     watch(() => route.path,
-     () => {
+      () => {
         title.value = route.meta.title;
         description.value = route.meta.description;
-     }
+      }
     )
     return {
       title,
