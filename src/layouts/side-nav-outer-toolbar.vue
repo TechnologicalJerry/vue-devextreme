@@ -1,32 +1,16 @@
 <template>
   <div class="side-nav-outer-toolbar">
-    <header-toolbar
-      class="layout-header"
-      :menu-toggle-enabled="true"
-      :toggle-menu-func="toggleMenu"
-      :title="title"
-    />
-    <dx-drawer
-      class="layout-body"
-      position="before"
-      template="menuTemplate"
-      v-model:opened="menuOpened"
-      :opened-state-mode="drawerOptions.menuMode"
-      :reveal-mode="drawerOptions.menuRevealMode"
-      :min-size="drawerOptions.minMenuSize"
-      :max-size="drawerOptions.maxMenuSize"
-      :shading="drawerOptions.shaderEnabled"
-      :close-on-outside-click="drawerOptions.closeOnOutsideClick"
-    >
+    <header-toolbar class="layout-header" :menu-toggle-enabled="true" :toggle-menu-func="toggleMenu" :title="title" />
+    <dx-drawer class="layout-body" position="before" template="menuTemplate" v-model:opened="menuOpened"
+      :opened-state-mode="drawerOptions.menuMode" :reveal-mode="drawerOptions.menuRevealMode"
+      :min-size="drawerOptions.minMenuSize" :max-size="drawerOptions.maxMenuSize" :shading="drawerOptions.shaderEnabled"
+      :close-on-outside-click="drawerOptions.closeOnOutsideClick">
       <dx-scroll-view ref="scrollViewRef" class="with-footer">
         <slot />
         <slot name="footer" />
       </dx-scroll-view>
       <template #menuTemplate>
-        <side-nav-menu
-          :compact-mode="!menuOpened"
-          @click="handleSideBarClick"
-        />
+        <side-nav-menu :compact-mode="!menuOpened" @click="handleSideBarClick" />
       </template>
     </dx-drawer>
   </div>
@@ -39,7 +23,7 @@ import DxScrollView from "devextreme-vue/scroll-view";
 import menuItems from "../app-navigation";
 import HeaderToolbar from "../components/header-toolbar";
 import SideNavMenu from "../components/side-nav-menu";
-import { computed, ref, watch} from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 export default {
@@ -90,7 +74,7 @@ export default {
         if (!menuTemporaryOpened.value) {
           menuOpened.value = props.isLarge;
         }
-    });
+      });
 
     watch(
       () => route.path,
@@ -99,7 +83,7 @@ export default {
           menuOpened.value = false;
           menuTemporaryOpened.value = false;
         }
-      scrollViewRef.value.instance.scrollTo(0);
+        scrollViewRef.value.instance.scrollTo(0);
       }
     );
 
