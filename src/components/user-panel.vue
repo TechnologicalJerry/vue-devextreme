@@ -4,25 +4,15 @@
       <div class="image-container">
         <div class="user-image" />
       </div>
-      <div class="user-name">{{email}}</div>
+      <div class="user-name">{{ email }}</div>
     </div>
 
-    <dx-context-menu
-      v-if="menuMode === 'context'"
-      target=".user-button"
-      :items="menuItems"
-      :width="210"
-      show-event="dxclick"
-      css-class="user-menu"
-    >
+    <dx-context-menu v-if="menuMode === 'context'" target=".user-button" :items="menuItems" :width="210"
+      show-event="dxclick" css-class="user-menu">
       <dx-position my="top center" at="bottom center" />
     </dx-context-menu>
 
-    <dx-list
-      v-if="menuMode === 'list'"
-      class="dx-toolbar-menu-action"
-      :items="menuItems"
-    />
+    <dx-list v-if="menuMode === 'list'" class="dx-toolbar-menu-action" :items="menuItems" />
   </div>
 </template>
 
@@ -68,8 +58,7 @@ export default {
     .user-image {
       width: 100%;
       height: 100%;
-      background: url("https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/06.png")
-        no-repeat #fff;
+      background: url("https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/06.png") no-repeat #fff;
       background-size: cover;
     }
   }
@@ -87,6 +76,7 @@ export default {
     color: $base-text-color;
     margin-right: 16px;
   }
+
   .dx-rtl .dx-list-item .dx-icon {
     margin-right: 0;
     margin-left: 16px;
@@ -99,9 +89,11 @@ export default {
       margin-left: 16px;
     }
   }
+
   .dx-submenu .dx-menu-items-container .dx-icon {
     margin-right: 16px;
   }
+
   .dx-menu-item .dx-menu-item-content {
     padding: 3px 15px 4px;
   }
