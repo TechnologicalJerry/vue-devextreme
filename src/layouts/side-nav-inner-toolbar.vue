@@ -6,6 +6,7 @@
       :min-size="drawerOptions.minMenuSize" :max-size="drawerOptions.maxMenuSize" :shading="drawerOptions.shaderEnabled"
       :close-on-outside-click="drawerOptions.closeOnOutsideClick">
       <div class="container">
+        
         <header-toolbar :menu-toggle-enabled="headerMenuTogglerEnabled" :toggle-menu-func="toggleMenu" />
         <dx-scroll-view ref="scrollViewRef" class="layout-body with-footer">
           <slot />
@@ -28,8 +29,9 @@
           </dx-toolbar>
         </side-nav-menu>
       </template>
+
     </dx-drawer>
-    
+
   </div>
 </template>
 
