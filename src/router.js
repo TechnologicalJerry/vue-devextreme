@@ -1,6 +1,5 @@
 import auth from "./auth";
 import { createRouter, createWebHashHistory } from "vue-router";
-
 import Home from "./views/home-page";
 import Profile from "./views/profile-page";
 import Tasks from "./views/tasks-page";
