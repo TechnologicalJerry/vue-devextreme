@@ -1,5 +1,6 @@
 <template>
   <div class="side-nav-inner-toolbar">
+
     <dx-drawer class="drawer" position="before" template="menuTemplate" v-model:opened="menuOpened"
       :opened-state-mode="drawerOptions.menuMode" :reveal-mode="drawerOptions.menuRevealMode"
       :min-size="drawerOptions.minMenuSize" :max-size="drawerOptions.maxMenuSize" :shading="drawerOptions.shaderEnabled"
@@ -28,6 +29,7 @@
         </side-nav-menu>
       </template>
     </dx-drawer>
+    
   </div>
 </template>
 
