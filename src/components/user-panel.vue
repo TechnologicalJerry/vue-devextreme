@@ -1,4 +1,5 @@
 <template>
+  
   <div class="user-panel">
     <div class="user-info">
       <div class="image-container">
@@ -14,6 +15,7 @@
 
     <dx-list v-if="menuMode === 'list'" class="dx-toolbar-menu-action" :items="menuItems" />
   </div>
+
 </template>
 
 <script>
