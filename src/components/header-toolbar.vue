@@ -25,7 +25,7 @@
       <template #menuUserItem>
         <user-panel :email="email" :menu-items="userMenuItems" menu-mode="list" />
       </template>
-      
+
     </dx-toolbar>
   </header>
 </template>
@@ -36,7 +36,6 @@ import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
 import auth from "../auth";
 import { useRouter, useRoute } from 'vue-router';
 import { ref } from 'vue';
-
 import UserPanel from "./user-panel";
 
 export default {
