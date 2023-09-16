@@ -63,7 +63,6 @@ import DxLoadIndicator from 'devextreme-vue/load-indicator';
 import notify from 'devextreme/ui/notify';
 import { useRouter } from 'vue-router';
 import { ref, reactive } from 'vue';
-
 import auth from "../auth";
 
 export default {
