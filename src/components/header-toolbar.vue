@@ -1,6 +1,7 @@
 <template>
   <header class="header-component">
     <dx-toolbar class="header-toolbar">
+
       <dx-item :visible="menuToggleEnabled" location="before" css-class="menu-button">
         <template #default>
           <dx-button icon="menu" styling-mode="text" @click="toggleMenuFunc" />
@@ -24,6 +25,7 @@
       <template #menuUserItem>
         <user-panel :email="email" :menu-items="userMenuItems" menu-mode="list" />
       </template>
+      
     </dx-toolbar>
   </header>
 </template>
