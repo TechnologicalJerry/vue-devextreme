@@ -1,53 +1,28 @@
 <template>
   <header class="header-component">
     <dx-toolbar class="header-toolbar">
-      <dx-item
-        :visible="menuToggleEnabled"
-        location="before"
-        css-class="menu-button"
-      >
+      <dx-item :visible="menuToggleEnabled" location="before" css-class="menu-button">
         <template #default>
-          <dx-button
-            icon="menu"
-            styling-mode="text"
-            @click="toggleMenuFunc"
-          />
+          <dx-button icon="menu" styling-mode="text" @click="toggleMenuFunc" />
         </template>
       </dx-item>
 
-      <dx-item
-        v-if="title"
-        location="before"
-        css-class="header-title dx-toolbar-label"
-      >
+      <dx-item v-if="title" location="before" css-class="header-title dx-toolbar-label">
         <div>{{ title }}</div>
       </dx-item>
 
-      <dx-item
-        location="after"
-        locate-in-menu="auto"
-        menu-item-template="menuUserItem"
-      >
-      <template #default>
+      <dx-item location="after" locate-in-menu="auto" menu-item-template="menuUserItem">
+        <template #default>
           <div>
-            <dx-button
-              class="user-button authorization"
-              :width="210"
-              height="100%"
-              styling-mode="text"
-            >
+            <dx-button class="user-button authorization" :width="210" height="100%" styling-mode="text">
               <user-panel :email="email" :menu-items="userMenuItems" menu-mode="context" />
             </dx-button>
           </div>
         </template>
       </dx-item>
-      
+
       <template #menuUserItem>
-        <user-panel
-          :email="email"
-          :menu-items="userMenuItems"
-          menu-mode="list"
-        />
+        <user-panel :email="email" :menu-items="userMenuItems" menu-mode="list" />
       </template>
     </dx-toolbar>
   </header>
@@ -75,18 +50,18 @@ export default {
 
     const email = ref("");
     auth.getUser().then((e) => email.value = e.data.email);
-    
+
     const userMenuItems = [{
-        text: "Profile",
-        icon: "user",
-        onClick: onProfileClick
-      },
-      {
-        text: "Logout",
-        icon: "runner",
-        onClick: onLogoutClick
+      text: "Profile",
+      icon: "user",
+      onClick: onProfileClick
+    },
+    {
+      text: "Logout",
+      icon: "runner",
+      onClick: onLogoutClick
     }];
-      
+
     function onLogoutClick() {
       auth.logOut();
       router.push({
@@ -125,7 +100,7 @@ export default {
   z-index: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-  .dx-toolbar .dx-toolbar-item.menu-button > .dx-toolbar-item-content .dx-icon {
+  .dx-toolbar .dx-toolbar-item.menu-button>.dx-toolbar-item-content .dx-icon {
     color: $base-accent;
   }
 }
@@ -154,7 +129,7 @@ export default {
     padding: 10px 0;
   }
 
-  .user-button > .dx-button-content {
+  .user-button>.dx-button-content {
     padding: 3px;
   }
 }
