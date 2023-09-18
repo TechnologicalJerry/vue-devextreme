@@ -1,5 +1,6 @@
 <template>
   <div class="user-panel">
+    
     <div class="user-info">
       <div class="image-container">
         <div class="user-image" />
