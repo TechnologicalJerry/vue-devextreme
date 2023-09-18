@@ -71,7 +71,6 @@ import DxForm, {
   DxButtonOptions
 } from "devextreme-vue/form";
 import notify from 'devextreme/ui/notify';
-
 import auth from "../auth";
 
 import { reactive, ref } from 'vue';
