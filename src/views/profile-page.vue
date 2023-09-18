@@ -10,12 +10,7 @@
     </div>
 
     <div class="content-block dx-card responsive-paddings">
-      <dx-form
-        id="form"
-        label-location="top"
-        :form-data="formData"
-        :colCountByScreen="colCountByScreen"
-      />
+      <dx-form id="form" label-location="top" :form-data="formData" :colCountByScreen="colCountByScreen" />
     </div>
   </div>
 </template>
@@ -29,7 +24,7 @@ export default {
   },
   setup() {
     const picture = "images/employees/06.png";
-    
+
     const imageSrc = `https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/${picture}`;
     const formData = {
       ID: 7,
