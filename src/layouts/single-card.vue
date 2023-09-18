@@ -12,7 +12,6 @@
 
 <script>
 import DxScrollView from "devextreme-vue/scroll-view";
-
 import { useRoute } from 'vue-router';
 import { watch, ref } from 'vue';
 
