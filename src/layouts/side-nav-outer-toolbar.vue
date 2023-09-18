@@ -35,7 +35,6 @@
 <script>
 import DxDrawer from "devextreme-vue/drawer";
 import DxScrollView from "devextreme-vue/scroll-view";
-
 import menuItems from "../app-navigation";
 import HeaderToolbar from "../components/header-toolbar";
 import SideNavMenu from "../components/side-nav-menu";
