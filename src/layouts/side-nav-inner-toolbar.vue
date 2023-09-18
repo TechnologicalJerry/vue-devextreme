@@ -54,7 +54,6 @@ import DxButton from "devextreme-vue/button";
 import DxDrawer from "devextreme-vue/drawer";
 import DxScrollView from "devextreme-vue/scroll-view";
 import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
-
 import HeaderToolbar from "../components/header-toolbar";
 import SideNavMenu from "../components/side-nav-menu";
 import menuItems from "../app-navigation";
