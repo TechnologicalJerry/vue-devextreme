@@ -52,7 +52,6 @@ import DxLoadIndicator from 'devextreme-vue/load-indicator';
 import notify from 'devextreme/ui/notify';
 import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
-
 import auth from "../auth";
 
 const notificationText = 'We\'ve sent a link to reset your password. Check your inbox.';
